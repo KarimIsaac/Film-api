@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Films</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #9CECFB;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      ul {
+        
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        text-align: center;
+        align-items: center;
+        background-color: #3c3838;
+        margin-bottom: 20px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(220, 6, 6, 0.1);
+        border-radius: 4px;
+        width: 300px;
+        height: 400px;
+        display:inline-block;
+      }
+
+      h2 {
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+
+      img {
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        height: 200px;
+        width: 200px;
+        
+        margin-top: 10px;
+       
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Films</h1>
+    <ul>
+      {{#each films}}
+      <li>
+        <h2>{{title}} ({{year}})</h2>
+        <p>Directed by {{director}}</p>
+        <p>Genre: {{genre}}</p>
+        <img src="{{image}}" alt="{{title}}" width="200">
+      </li>
+      {{/each}}
+    </ul>
+  </body>
+</html>
